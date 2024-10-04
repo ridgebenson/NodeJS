@@ -29,11 +29,17 @@ export async function populateDOM() {
             const eventCompany = document.createElement('p');
             eventCompany.innerText = `Organizer: ${event.company}`;
 
-            const addToCartBtn = document.createElement('button');
-            addToCartBtn.innerText = 'Add to Cart';
-            addToCartBtn.addEventListener('click', () => addToCart(event.id)); // Pass the product ID
+            const viewBtn = document.createElement('button');
+            viewBtn.innerText = 'View';
 
-            eventCard.append(eventImg, eventTitle, eventPrice, eventDate, eventLocation, eventCompany, addToCartBtn);
+            const editBtn = document.createElement('button');
+            editBtn.innerText = 'Edit';
+
+            const delBtn = document.createElement('button');
+            delBtn.innerText = 'Delete';
+            
+
+            eventCard.append(eventImg, eventTitle, eventPrice, eventDate, eventLocation, eventCompany);
             container.appendChild(eventCard);
         });
     } catch (error) {

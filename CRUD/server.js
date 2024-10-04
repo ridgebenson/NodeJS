@@ -51,8 +51,18 @@ const server = http.createServer((req, res) => {
                 <link rel="stylesheet" href="/public/style.css">
             </head>
             <body>
+                <div class="header">
+                    <h1>Nunua Tiko 🎫🎟️</h1>
+                    <button> Add an Event </button>
+                </div>
                 <div class="container">
                     <div id="events-container"></div>
+                    <div class="cart">
+                        <h2>Event Details</h2>
+                        <div id="cartContainer">
+                            
+                        </div>
+                    </div>
                     <script type="module">
                         import { populateDOM } from './utils/populateDOM.js';
                         populateDOM();
