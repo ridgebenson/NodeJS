@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const router = require('./routes/eventsRoutes.js');
 
-// Serve static files (like populateDOM.js and style.css)
+// Serve static files (populateDOM.js and style.css)
 const server = http.createServer((req, res) => {
     // Serve static files in the /public folder
     if (req.url.startsWith('/public/')) {
@@ -47,20 +47,20 @@ const server = http.createServer((req, res) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Events</title>
+                <title>🎟️ Eventure </title>
                 <link rel="stylesheet" href="/public/style.css">
             </head>
             <body>
                 <div class="header">
-                    <h1>Nunua Tiko 🎫🎟️</h1>
-                    <button> Add an Event </button>
+                    <h1>🎟️ Eventure 🎟️</h1>
+                    <button id="addEvent"> Add an Event </button>
                 </div>
                 <div class="container">
                     <div id="events-container"></div>
                     <div class="cart">
-                        <h2>Event Details</h2>
+                        <h3>Event Details</h3>
                         <div id="cartContainer">
-                            
+                            <p style="text-align:center; color:grey;">Click on an event to view details</p>
                         </div>
                     </div>
                     <script type="module">

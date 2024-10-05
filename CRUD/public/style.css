@@ -8,8 +8,6 @@ body {
 .header {
     background-color: #fdf5df;
     color: #f92c85;
-    /* background-color: #333; */
-    /* color: white; */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -21,22 +19,19 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border: 1px solid blue;
+    background-color: white;
 }
 
 #events-container {
     display: flex;
     padding: 10px;
-    /* flex-direction: column; */
-    border: 1px solid green;
     flex-wrap: wrap;
     width: 70%;
     justify-content: space-around;
-    /* justify-content: space-between; */
-
+    background-color: white;
+    border-radius: 10px;
 }
 
-.product,
 .cart-item {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -45,16 +40,22 @@ body {
     width: 30%;
 }
 
-.product:hover {
-    /* Box Shadow Effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    background-color: #fdf5df;
+}
 
-    /* Transform Scale Effect */
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     transition: transform 0.3s ease;
-
-    /* Background Color Change */
-    background-color: #f0f0f0;
+    background-color: burlywood;
 }
 
 .product-image {
@@ -64,18 +65,45 @@ body {
     object-fit: cover;
 }
 
+.btn-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.btn {
+    background-color: #f92c85;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    flex: 1 1 auto;
+    margin: 5px;
+}
+
+#addEvent{
+    background-color: #f92c85;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 .cart {
     width: 300px;
-    border: 1px solid red;
     padding: 10px;
-    height: 50vh;
+    height: fit-content;
+    background-color: burlywood;
+    border-radius: 10px;
 }
 
 .cart h3 {
     margin-top: 0;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
+    color: #150734;
+    text-align: center;
 }

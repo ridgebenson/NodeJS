@@ -17,30 +17,7 @@ const router = async (req, res) => {
         res.end(JSON.stringify(data));
     };
 
-
-    if (req.url === '/' && req.method === 'GET') {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(`
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Events</title>
-                <link rel="stylesheet" href="/public/style.css">
-            </head>
-            <body>
-                <div id="events-container"></div>
-                <script type="module">
-                    import { populateDOM } from './utils/populateDOM.js';
-                    populateDOM();
-                </script>
-            </body>
-            </html>
-        `);
-    }
-    // Get all events
-    else if (url === '/api/events' && method === 'GET') {
+    if (url === '/api/events' && method === 'GET') {
         if (eventsListData.length === 0) {
             sendJSONResponse(404, { message: 'No events found' });
             return;
@@ -138,7 +115,7 @@ const router = async (req, res) => {
                 sendJSONResponse(500, { message: 'Failed to delete event from database' });
                 return;
             }
-            sendJSONResponse(204, { message: 'Event deleted' });
+            sendJSONResponse(200, { message: 'Event deleted' });
         });
     }
     else {
